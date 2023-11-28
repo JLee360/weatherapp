@@ -1,116 +1,69 @@
 <!DOCTYPE html>
 <hmtl lang="eng">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport"
-        content="width-device-width,
-        initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible"
-        content="ie=edge" />
-        <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-        rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
-        crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="styles.css" />
-        <title>
-            Weather App
-        </title>
-    </head>
-    <body>
-      <div class="container">
-        <div class="search-box">
-          <i class="fa-solid fa-location-dot"></i>
-          <input type="text" placeholder="enter your city">
-          <button class="fa-solid fa-magnifying-glass"></button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width-device-width,
+        initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Weather App</title>
+  </head>
+
+  <div class="weather-app">
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            id="search-form-input"
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city" id="city"></h1>
+            <p class="weather-app-details">
+              <span id="time"></span>,
+              <span id="description"></span>
+              <br />
+              Humidity: <strong id="humidity"></strong>, Wind:
+              <strong id="wind-speed"></strong>
+            </p>
           </div>
+          <div class="weather-app-temperature-container">
+            <div id="icon"></div>
+            <div class="weather-app-temperature" id="temperature"></div>
+            <div class="weather-app-unit">°C</div>
+          </div>
+        </div>
+        <div class="weather-forecast" id="forecast"></div>
+      </main>
 
-          <br>
-          <br>
-          <br>
-          <h1>New York City</h1>
-          <p>
-            <h4>Tuesday, 10:45 am</h4>
-          </p>
+    <footer>
+      Coded by Jenna and is open-sourced on
+      <a href="https://github.com/JLee360/weatherapp">Github</a>
+      and hosted on
+      <a href="https://ephemeral-dasik-3c5186.netlify.app/">Netlify</a>
+    </footer>
 
-          <br>
-          <p>
-            <h2><i class="fa-solid fa-cloud"> 60°F | 15°C</i></h2>
-          </p>
-          <p><h2>Cloudy</h2></p>
-    
-          <br>
-          <br>
-          <div class="row">
-            <div class="col-6">Humidity: 66%</div>
-            <div class="col-6">Wind Speed: 5mph</div>
-      </div>
-
-      <br>
-      <br>
-      <br>
-      <div class="container-2">
-  <div class="row">
-    <div class="col-sm">
-      <strong>Wed</strong>
-    </div>
-    <div class="col-sm">
-      <strong>Thu</strong>
-    </div>
-    <div class="col-sm">
-      <strong>Fri</strong>
-    </div>
-    <div class="col-sm">
-      <strong>Sat</strong>
-    </div>
-    <div class="col-sm">
-       <strong>Sun</strong>
-    </div>
-  </div>
-</div>
-
-      <div class="container-3">
-  <div class="row">
-    <div class="col-sm">
-      <i class="fa-solid fa-cloud"></i>
-    </div>
-    <div class="col-sm">
-      <i class="fa-solid fa-cloud-rain"></i>
-    </div>
-    <div class="col-sm">
-      <i class="fa-solid fa-cloud"></i>
-    </div>
-    <div class="col-sm">
-      <i class="fa-solid fa-cloud-rain"></i>
-    </div>
-    <div class="col-sm">
-      <i class="fa-solid fa-cloud-rain"></i>
-    </div>
-  </div>
-</div>
-
- <div class="container-4">
-  <div class="row">
-    <div class="col-sm">
-      <small>°F |°C</small>
-    </div>
-    <div class="col-sm">
-      <small>°F |°C</small>
-    </div>
-    <div class="col-sm">
-      <small>°F |°C</small>
-    </div>
-    <div class="col-sm">
-      <small>°F |°C</small>
-    </div>
-    <div class="col-sm">
-      <small>°F |°C</small>
-    </div>
-  </div>
-</div>
-<p>Coded by Jenna and is open-sourced on <a href="https://github.com/JLee360/weatherapp">Github</a></p>
-      <script src="https://kit.fontawesome.com/950c797b57.js" 
-      crossorigin="anonymous"></script>
-      <script src="index.js"></script>
-    </body>
+    <script
+      src="https://kit.fontawesome.com/950c797b57.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
 </hmtl>

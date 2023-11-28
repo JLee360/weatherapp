@@ -1,140 +1,125 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: none;
-  box-sizing: border-box;
-}
-
 body {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #b2dcd8;
+  background-color: #b2dcd8;
+  font-family: "Roboto", sans-serif;
 }
 
-h1 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  font-size: 20px;
-  color: #183153;
+a {
+  color: darkcyan;
 }
 
-h2 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  font-size: 20px;
-  color: #183153;
-}
-
-h4 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  font-size: 12px;
-  color: #183153;
-}
-
-.container {
-  position: relative;
-  width: 400px;
-  height: 605px;
+.weather-app {
   background: #f7f2e5;
-  padding: 28px 32px;
-  overflow: hidden;
-  border-radius: 18px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  transition: 0.6s ease-out;
+  max-width: 600px;
+  margin: 45px auto;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  border-radius: 16px;
+  padding: 30px;
 }
 
-.search-box {
-  width: 100%;
-  height: min-content;
+header {
+  border-bottom: 1px solid black;
+  padding: 0 0 30px 0;
+}
+
+.search-form-input {
+  background-color: #f9f7fe;
+  border: none;
+  border-radius: 6px;
+  width: 80%;
+  font-size: 16px;
+  padding: 15px 20px;
+}
+
+.search-form-button {
+  background: #0f2b54;
+  padding: 15px 30px;
+  border: none;
+  font-size: 16px;
+  margin-left: 5px;
+  border-radius: 6px;
+  color: whitesmoke;
+}
+
+main {
+  padding: 30px 0;
+}
+
+.weather-app-data {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
-.search-box input {
-  color: black;
-  width: 80%;
-  font-size: 15px;
+.weather-app-city {
+  margin: 0;
+  font-size: 38px;
+  line-height: 48px;
+}
+
+.weather-app-details {
+  font-size: 16px;
+  color: rgba(39, 33, 66, 0.4);
+  line-height: 24px;
   font-weight: 500;
-  text-transform: uppercase;
-  padding-left: 32px;
 }
 
-.search-box input::placeholder {
-  font-size: 15px;
-  font-weight: 500;
-  color: black;
-  text-transform: capitalize;
+.weather-app-details strong {
+  color: darkcyan;
 }
 
-.search-box button {
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  color: black;
-  background: #b2dcd8;
-  border-radius: 40%;
-  font-size: 15px;
-  transition: 0.4s ease;
+.weather-app-temperature-container {
+  display: flex;
 }
 
-.weather-box {
-  text-align: center;
+.weather-app-icon {
+  width: 88px;
+  height: 88px;
 }
 
-.weather-box img {
-  width: 60%;
+.weather-app-temperature {
+  font-size: 88px;
+  line-height: 88px;
+  font-weight: bold;
+}
+
+.weather-app-unit {
+  margin-top: 6px;
+  font-size: 28px;
+}
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
   margin-top: 30px;
 }
 
-.weather-box temperature {
-  position: relative;
-  color: black;
-  font-size: 4rem;
-  font-weight: 800;
-  margin-top: 30px;
-  margin-left: -16px;
-}
-
-.weather-box temperature span {
-  position: absolute;
-  margin-left: 4px;
-  font-size: 1.5rem;
-}
-
-.weather-box description {
-  color: black;
-  font-size: 22px;
-  font-weight: 500;
-  text-transform: capitalize;
-}
-
-.row {
-  color: black;
+.weather-forecast-date {
   text-align: center;
-  font-size: 13px;
-  text-transform: capitalize;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
 }
 
-.container-2 {
+.weather-forecast-icon {
+  font-size: 38px;
+  text-align: center;
+}
+.weather-forecast-temperatures {
+  text-align: center;
+  color: darkcyan;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-forecast-temperature {
+  padding: 0 10px;
+}
+
+footer {
+  border-top: 1px solid #f9f7fe;
+  padding: 30px 0 0 0;
   text-align: center;
   font-size: 14px;
-  color: #183153;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.container-3 {
-  color: #547f75;
-  font-size: 14px;
-}
-
-.container-4 {
-  font-size: 8px;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgba(0, 0, 0, 0.6);
 }
